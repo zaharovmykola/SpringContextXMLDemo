@@ -14,6 +14,14 @@
 		<!-- getTool/setTool -->
 		<!-- <property name="tool" ref="plow"></property> -->
 	</bean>
+
+	<bean id="wizard_unit" class="builder.Unit">
+		<!-- Unit(IPerson _person, ITool _tool) -->
+		<constructor-arg type="interfaces.IPerson" ref="wizard"></constructor-arg>
+		<constructor-arg type="interfaces.ITool" ref="wand"></constructor-arg>
+		<!-- getTool/setTool -->
+		<!-- <property name="tool" ref="plow"></property> -->
+	</bean>
 	
 	<!-- Value types constructor n properties -->
 	<bean id="warrior_unit2" class="builder.Unit">
@@ -65,7 +73,9 @@
 
 	<bean id="peasant" class="implementations.Peasant"></bean>
 	<bean id="warrior" class="implementations.Warrior"></bean>
+	<bean id="wizard" class="implementations.Wizard"></bean>
 	
 	<bean id="sword" class="implementations.Sword"></bean>
 	<bean id="plow" class="implementations.Plow"></bean>
+	<bean id="wand" class="implementations.Wand"></bean>
 </beans>
